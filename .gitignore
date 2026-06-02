@@ -1,10 +1,5 @@
 # HSI-MSI Fusion Benchmark Framework .gitignore
 
-# Data
-data/
-datasets/
-!src/data/
-
 # Python
 __pycache__/
 *.py[cod]
