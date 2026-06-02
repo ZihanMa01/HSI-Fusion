@@ -1,0 +1,13 @@
+# Washington DC Mall (HYDICE 传感器)
+# 191 bands, 300×300, v7.3 .mat (h5py)
+# SRF: wadc.xls (6 bands)
+
+root_dir: "C:/Data/HSI-Datasets"
+file: "wadc.mat"
+shape_order: "HWC"
+single_scene: true
+tag: "Washington DC Mall"
+degradation:
+  srf:
+    type: "xlsx"
+    path: "C:/Data/HSI-Datasets/spectral_response/wadc.xls"

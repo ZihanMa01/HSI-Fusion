@@ -1,0 +1,8 @@
+# Chikusei 航空高光谱数据集
+# 128 bands (363-1018nm), 2517×2335, 单张大图
+
+root_dir: "C:/Data/HSI-Datasets/chikusei"
+file: "*.mat"
+shape_order: "HWC"
+single_scene: true
+tag: "Chikusei"

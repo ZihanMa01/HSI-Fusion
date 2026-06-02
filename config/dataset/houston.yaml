@@ -1,0 +1,13 @@
+# Houston (2018 GRSS DFC)
+# 46 bands, 240×240, v7 .mat (scipy)
+# SRF: houston.xls (8 bands)
+
+root_dir: "C:/Data/HSI-Datasets"
+file: "houston.mat"
+shape_order: "HWC"
+single_scene: true
+tag: "Houston"
+degradation:
+  srf:
+    type: "xlsx"
+    path: "C:/Data/HSI-Datasets/spectral_response/houston.xls"

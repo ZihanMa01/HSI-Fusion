@@ -1,0 +1,14 @@
+# Pavia Centre (ROSIS 传感器)
+# 102 bands, 1096×715, 有黑边需裁剪
+# SRF: paviau.xls (3 bands)
+
+root_dir: "C:/Data/HSI-Datasets/Pavia"
+file: "Pavia.mat"
+shape_order: "HWC"
+single_scene: true
+crop_black: true
+tag: "Pavia Centre"
+degradation:
+  srf:
+    type: "xlsx"
+    path: "C:/Data/HSI-Datasets/spectral_response/paviau.xls"

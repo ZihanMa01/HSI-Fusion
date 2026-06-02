@@ -1,0 +1,9 @@
+# Harvard Hyperspectral Image Database
+# 31 bands (420-720nm@10nm), 1392×1040, 50+ scenes
+# .mat 变量名为 ref，形状 (H, W, C)
+
+root_dir: "C:/Data/HSI-Datasets/harvard"
+file: "*.mat"
+shape_order: "HWC"
+single_scene: false
+tag: "Harvard"

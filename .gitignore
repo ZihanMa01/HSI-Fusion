@@ -1,0 +1,58 @@
+# HSI-MSI Fusion Benchmark Framework .gitignore
+
+# Data
+data/
+datasets/
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+*.egg-info/
+dist/
+build/
+*.egg
+
+# Experiments / Outputs
+experiments/
+runs/
+logs/
+checkpoints/
+weights/
+results/
+
+# IDE
+.idea/
+.vscode/
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Jupyter
+.ipynb_checkpoints/
+
+# Environment
+venv/
+.venv/
+env/
+conda-env/
+
+# PyTorch
+*.pt
+*.pth
+*.pkl
+
+# Temp
+tmp/
+temp/
+*.tmp
+
+# Project specific
+*.mat
+*.h5
+*.hdf5

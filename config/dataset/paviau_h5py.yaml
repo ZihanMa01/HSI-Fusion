@@ -1,0 +1,14 @@
+# Pavia University (v7.3 h5py 版本)
+# 93 bands, 336×336, v7.3 .mat (h5py)
+# 与 scipy 版的 PaviaU 不同——已预处理降采样
+# SRF: paviau.xls (3 bands)
+
+root_dir: "C:/Data/HSI-Datasets"
+file: "paviau.mat"
+shape_order: "HWC"
+single_scene: true
+tag: "Pavia University (h5py)"
+degradation:
+  srf:
+    type: "xlsx"
+    path: "C:/Data/HSI-Datasets/spectral_response/paviau.xls"

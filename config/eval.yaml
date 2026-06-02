@@ -1,0 +1,15 @@
+# 评估配置
+# 用法: python run.py --mode eval --config config/eval.yaml
+
+defaults:
+  - default.yaml
+
+experiment:
+  name: "eval_experiment"
+
+training:
+  epochs: 0  # 不训练
+
+evaluation:
+  nr_metrics: true
+  efficiency: true

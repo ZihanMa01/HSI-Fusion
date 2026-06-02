@@ -1,0 +1,14 @@
+# CNMF 方法配置
+# Yokoya et al., TGRS 2012
+
+method:
+  name: "cnmf"
+
+n_endmembers: null       # null=VD自动估计
+outer_iter: 1            # 外循环次数（>1 效果更好但更慢）
+inner_iter: 200          # 内循环最大迭代数
+th_h: 1e-8               # HS 分支收敛阈值
+th_m: 1e-8               # MS 分支收敛阈值
+th2: 1e-2                # 外循环收敛阈值
+init_mode: 0             # 0=常数初始化, 1=FCLS
+verbose: false

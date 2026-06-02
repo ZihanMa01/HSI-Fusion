@@ -1,0 +1,72 @@
+# HSI-MSI Fusion Benchmark 默认配置
+# 所有实验参数通过此文件管理，确保可复现性
+
+# 实验设置
+experiment:
+  name: "default_experiment"
+  seed: 42
+  deterministic: true
+  device: "cuda"  # "cuda" | "cpu"
+  amp: false       # 混合精度训练
+
+# 数据
+data:
+  root_dir: "./data"
+  dataset: "PaviaU_h5py"           # cave | harvard | chikusei | pavia | houston
+  full_image: true          # true=全图模式, false=patch模式（训练测试一致）
+
+  # 退化参数
+  degradation:
+    psf:
+      type: "gaussian"      # 默认 Wald's protocol: sigma=scale/2.35482, ksize=scale|1
+      spatial_scale: 3      # 空间下采样倍数
+    srf:
+      type: "xlsx"       # nikonos | xlsx | random
+      n_msi_bands: 3        # 仅 nikonos/random 生效，xlsx 从文件列数自动推断
+    noise:
+      type: "none"          # "none" | "gaussian"
+      snr_db: 30            # 仅在 type=gaussian 时生效
+
+  # DataLoader
+  dataloader:
+    batch_size: 16
+    num_workers: 4
+    pin_memory: true
+    drop_last: true
+    hr_crop_size: 128         # HR 裁剪尺寸（patch模式）
+    train_split: 0.8          # 训练集比例
+
+# 方法
+method:
+  name: "baseline_cnn"     # 融合方法名称
+  # 模型特定参数在 method/{name}.yaml 中
+
+# 训练
+training:
+  epochs: 200
+  log_interval: 50
+
+  optimizer:
+    type: "adam"
+    lr: 1.0e-4
+    weight_decay: 0.0
+
+  scheduler:
+    type: "cosine"
+    eta_min: 1.0e-6
+
+  loss:
+    l1: 1.0
+    sam: 0.1
+
+# 评估
+evaluation:
+  metrics:
+    - "PSNR"
+    - "SSIM"
+    - "SAM"
+    - "ERGAS"
+    - "UIQI"
+  nr_metrics: false          # 是否计算无参考指标
+  efficiency: true           # 是否计算效率指标
+  save_results: true

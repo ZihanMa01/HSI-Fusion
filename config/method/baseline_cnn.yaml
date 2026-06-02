@@ -1,0 +1,17 @@
+# Baseline CNN 配置
+
+method:
+  name: "baseline_cnn"
+
+model:
+  n_hsi_bands: 31
+  n_msi_bands: 3
+  n_feat: 64
+  spatial_scale: 4
+
+training:
+  epochs: 200
+  optimizer:
+    lr: 1.0e-4
+  scheduler:
+    type: "cosine"

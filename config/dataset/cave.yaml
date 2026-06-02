@@ -1,0 +1,8 @@
+# CAVE Multispectral Image Database
+# 31 bands (400-700nm@10nm), 512×512, 32 scenes
+
+root_dir: "C:/Data/HSI-Datasets/cave"
+file: "*.mat"
+shape_order: "CHW"
+single_scene: false
+tag: "CAVE"
