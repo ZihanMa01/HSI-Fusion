@@ -2,6 +2,7 @@
 
 # Python
 __pycache__/
+.pytest_cache/
 *.py[cod]
 *$py.class
 *.so
@@ -21,6 +22,7 @@ results/
 # IDE
 .idea/
 .vscode/
+.claude/
 *.swp
 *.swo
 *~
