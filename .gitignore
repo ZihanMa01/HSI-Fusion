@@ -3,6 +3,7 @@
 # Data
 data/
 datasets/
+!src/data/
 
 # Python
 __pycache__/
